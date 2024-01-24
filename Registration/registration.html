@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Форма реєстрації">
+    <meta name="keywords" content="Registration, Форма реєстрації">
+    <meta name="author" content="Oleksandr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація</title>
+    <link rel="stylesheet" type="text/css" href="./style_css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Реєстрація</h1>
+    </header>
+    <main>
+        <form action="/action_page.php" method="post">
+            <fieldset class="container">
+                <legend>Заповніть цю форму</legend>
+                <label for="email"><b>Почта</b></label>
+                <input type="text" id="email" name="email" placeholder="Вкажіть email" autocomplete="off" required>
+                <label for="psw"><b>Пароль</b></label>
+                <input type="password" id="psw" name="psw" placeholder="Введіть пароль" autocomplete="off" required>
+                <label for="psw-repeat"><b>Підтвердження паролю</b></label>
+                <input type="password" id="psw-repeat" name="psw-repeat" placeholder="Введіть пароль" autocomplete="off"
+                    required>
+                <button type="submit" class="input_button">Зареєструватись</button>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <p>&#169; 24.01.2024</p>
+    </footer>
+</body>
+
+</html>
