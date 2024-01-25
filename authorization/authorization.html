@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Форма авторизації">
+    <meta name="keywords" content="authorization, Форма авторизації">
+    <meta name="author" content="Oleksandr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизація</title>
+    <link rel="stylesheet" type="text/css" href="./style_css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Авторизація</h1>
+    </header>
+    <main>
+        <form action="/action_page.php" method="post">
+            <fieldset class="container">
+                <legend>Заповніть цю форму</legend>
+                <label for="email"><b>Почта</b></label>
+                <input type="text" id="email" name="email" placeholder="Вкажіть email" autocomplete="off" required>
+                <label for="psw"><b>Пароль</b></label>
+                <input type="password" id="psw" name="psw" placeholder="Введіть пароль" autocomplete="off" required>
+                <input type="checkbox" id="psw-save" name="psw-save">
+                <label for="psw-save">Зберегти пароль</label>
+                <button type="submit" class="input_button">Вхід</button>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <p>&#169; 25.01.2024</p>
+    </footer>
+</body>
+
+</html>
