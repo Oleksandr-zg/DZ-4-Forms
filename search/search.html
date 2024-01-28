@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Форма пошук">
+    <meta name="keywords" content="search, Форма пошук">
+    <meta name="author" content="Oleksandr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пошук</title>
+    <link rel="stylesheet" type="text/css" href="./style_css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Пошук</h1>
+    </header>
+    <main>
+        <form action="/action_page.php" name="search" method="get">
+            <fieldset class="container">
+                <legend>Заповніть цю форму</legend>
+
+                <select class="container" name="body_type">
+                    <option value style="display: none;">Тип кузова</option>
+                    <option value="hatch-back">Хетчбек</option>
+                    <option value="sedan">Седан</option>
+                    <option value="versatile">Універсал</option>
+                    <option value="crossover">Кросовер</option>
+                    <option value="compartment">Купе</option>
+                    <option value="cabriolet">Кабріолет</option>
+                    <option value="SUV">Позашляховик</option>
+                    <option value="pickup">Пікап</option>
+                    <option value="miniveins">Мінівен</option>
+                    <option value="van">Фургон</option>
+                </select>
+
+                <select class="container" name="make_of_the_car">
+                    <option value style="display: none;">Марка</option>
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="fiay">Fiat</option>
+                    <option value="audi">Audi</option>
+                    <option value="ford">Ford</option>
+                    <option value="honda">Honda</option>
+                    <option value="jeep">Jeep</option>
+                    <option value="opel">Opel</option>
+                    <option value="mazda">Mazda</option>
+                    <option value="lexus">Lexus</option>
+                </select>
+
+                <fieldset class="container">
+                    <legend>Країна виробник</legend>
+                    <input type="radio" id="options_0" name="producer" value="all">
+                    <label for="options_0"><b>Всі</b></label>
+
+                    <input type="radio" id="options_1" name="producer" value="Ukraine">
+                    <label for="options_1"><b>Україна</b></label>
+
+                    <input type="radio" id="options_2" name="producer" value="Europe">
+                    <label for="options_2"><b>Європа</b></label>
+
+                    <input type="radio" id="options_3" name="producer" value="USA">
+                    <label for="options_3"><b>США</b></label>
+
+                    <input type="radio" id="options_4" name="producer" value="Asia">
+                    <label for="options_4"><b>Азія</b></label>
+                </fieldset>
+
+                <fieldset class="container">
+                    <legend>Ціна</legend>
+                    <input type="radio" id="currency_1" name="currency" value="UAN">
+                    <label for="currency_1"><b>UAN</b></label>
+
+                    <input type="radio" id="currency_2" name="currency" value="USA">
+                    <label for="currency_2"><b>USA</b></label>
+
+                    <input type="radio" id="currency_3" name="currency" value="EUR">
+                    <label for="currency_3"><b>EUR</b></label><br><br>
+
+                    <input type="text" name="sum_min" placeholder="Ціна від" value>
+                    <input type="text" name="sum_max" placeholder="Ціна до" value>
+                </fieldset>
+
+                <fieldset class="container">
+                    <legend>Рік випуску</legend>
+
+                    <label for="datemax">З</label>
+                    <input type="date" id="datemax" name="datemax" max="1980-12-31" value>
+
+                    <label for="datemin">По</label>
+                    <input type="date" id="datemin" name="datemin" min="2020-12-31" value>
+                </fieldset>
+
+                <fieldset class="container">
+                    <legend>Стан</legend>
+                    <input type="checkbox" id="new_type" name="state_car" value="new_cars">
+                    <label for="new_type"><b>Нові</b></label>
+
+                    <input type="checkbox" id="bu_type" name="state_car" value="bu_cars">
+                    <label for="bu_type"><b>Вживані</b></label>
+
+                    <input type="checkbox" id="not_cleared_type" name="state_car" value="not_cleared _cars">
+                    <label for="not_cleared_type"><b>Нерозмитнена</b></label>
+
+                    <input type="checkbox" id="credit_type" name="state_car" value="car_on_credit">
+                    <label for="credit_type"><b>В кредит</b></label>
+                </fieldset>
+
+                <fieldset class="container">
+                    <legend>Тип палива</legend>
+                    <input type="checkbox" id="gasoline" name="fuel_type" value="gasoline">
+                    <label for="gasoline"><b>Бензин</b></label>
+
+                    <input type="checkbox" id="diesel" name="fuel_type" value="diesel">
+                    <label for="diesel"><b>Дизель</b></label>
+
+                    <input type="checkbox" id="electro" name="fuel_type" value="electro">
+                    <label for="electro"><b>Єлектро</b></label>
+
+                    <input type="checkbox" id="hybrid" name="fuel_type" value="hybrid">
+                    <label for="hybrid"><b>Гібрид</b></label>
+                </fieldset>
+
+                <fieldset class="container">
+                    <legend>Тип коробки передач</legend>
+                    <input type="checkbox" id="mechanical_box" name="box" value="mechanical">
+                    <label for="mechanical_box"><b>Механічна коробка</b></label>
+
+                    <input type="checkbox" id="automatic_box" name="box" value="automatic">
+                    <label for="automatic_box"><b>Автоматична коробка</b></label><br>
+
+                    <input type="checkbox" id="robotic_box" name="box" value="robotic">
+                    <label for="robotic_box"><b>Роботизована коробка</b></label>
+
+                    <input type="checkbox" id="variable_box" name="box" value="variable">
+                    <label for="variable_box"><b>вариативна коробка</b></label>
+                </fieldset>
+
+                <fieldset class="container">
+                    <legend>Колір</legend>
+                    <label for="color_car">Виберіть колір:</label>
+                    <input type="color" id="color_car" name="color_car" value="#ff0000">
+                </fieldset>
+
+                <fieldset class="container">
+                    <legend>Класи автомобілів</legend>
+                    <input type="checkbox" id="class_a" name="class" value="a">
+                    <label for="class_a"><b>A</b></label>
+
+                    <input type="checkbox" id="class_b" name="class" value="b">
+                    <label for="class_b"><b>B</b></label>
+
+                    <input type="checkbox" id="class_c" name="class" value="c">
+                    <label for="class_c"><b>C</b></label>
+
+                    <input type="checkbox" id="class_d" name="class" value="d">
+                    <label for="class_d"><b>D</b></label>
+                </fieldset>
+
+                <input type="reset" class="input_reset" value="Скинути">
+                <button type="submit" class="input_button">Пошук</button>
+
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <p>&#169; 26.01.2024</p>
+    </footer>
+</body>
+
+</html>
