@@ -16,17 +16,21 @@
         <h1>Реєстрація</h1>
     </header>
     <main>
-        <form action="/action_page.php" method="post">
+        <form action="/action_page.php" name="check-in" method="post">
             <fieldset class="container">
                 <legend>Заповніть цю форму</legend>
+
                 <label for="email"><b>Почта</b></label>
-                <input type="text" id="email" name="email" placeholder="Вкажіть email" autocomplete="off" required>
+                <input type="email" id="email" name="email" placeholder="Вкажіть email" autocomplete="off" required>
+
                 <label for="psw"><b>Пароль</b></label>
                 <input type="password" id="psw" name="psw" placeholder="Введіть пароль" autocomplete="off" required>
+
                 <label for="psw-repeat"><b>Підтвердження паролю</b></label>
-                <input type="password" id="psw-repeat" name="psw-repeat" placeholder="Введіть пароль" autocomplete="off"
-                    required>
+                <input type="password" id="psw-repeat" name="psw-repeat" placeholder="Введіть пароль" autocomplete="off" required>
+
                 <button type="submit" class="input_button">Зареєструватись</button>
+
             </fieldset>
         </form>
     </main>
